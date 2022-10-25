@@ -30,8 +30,6 @@ $(function(){
 		
 		$('#btnUidCheck').click(function(){
 			
-			alert('클릭');
-			
 			let uid = $('input[name=uid]').val();
 			//alert(uid);
 			
