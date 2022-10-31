@@ -2,12 +2,13 @@
 <%@ include file="./_header.jsp" %>
         <main id="board" class="write">
 
-            <form action="#">
+            <form action="/JBoard1/proc/writeProc.jsp" method="post" enctype="multipart/form-data">
+            <input type = "hidden" name = "uid" value = "<%=sessUser.getUid() %>"/>
                 <table>
                     <caption>글쓰기</caption>
                     <tr>
                         <th>제목</th>
-                        <td><input type="text" name="text" placeholder="제목을 입력하세요"></td>
+                        <td><input type="text" name="title" placeholder="제목을 입력하세요"></td>
                     </tr>
                     <tr>
                         <th>내용</th>
@@ -15,7 +16,7 @@
                     </tr>
                     <tr>
                         <th>파일</th>
-                        <td><input type="file" name="file"></td>
+                        <td><input type="file" name="fname"></td>
                     </tr>
                 </table>
 
