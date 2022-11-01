@@ -7,27 +7,23 @@
 <%@ include file="./_header.jsp" %>
 <script>
 	$(function(){
-		$(`.next`).click(function(){
-			
+		$('.next').click(function(){
 			let isCheck1 = $('input[class=terms]').is(':checked');
-			let isCheck2 = $('input[class=privacy]').is(':checked');
+			let isCheck2 = $('input[class=privacy]').is(':checked');			
 			
 			if(isCheck1 && isCheck2){
-				return true;
+				return true;	
 			}else{
-				alert('동의 체크를 하셔야 합니다.')
-				return false;
+				alert('동의 체크를 하셔야 합니다.');
+				return false;	
 			}
-		})
-		
+		});
 	});
-
-
 </script>
-
 <%
 	String terms = null; 
 	String privacy = null;
+
 	try{
 		Connection conn = DBCP.getConnection();
 		Statement stmt = conn.createStatement();
@@ -74,4 +70,3 @@
 </main>
 
 <%@ include file="./_footer.jsp" %>
- 

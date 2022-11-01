@@ -1,4 +1,4 @@
-package kr.co.jboard1.db;
+package config;
 
 import java.sql.Connection;
 import java.sql.SQLException;

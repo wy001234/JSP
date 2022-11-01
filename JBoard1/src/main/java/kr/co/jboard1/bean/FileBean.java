@@ -1,26 +1,25 @@
 package kr.co.jboard1.bean;
 
-import java.sql.Date;
-
 public class FileBean {
 
 	private int fno;
-	private int parpent;
+	private int parent;
 	private String newName;
 	private String oriName;
 	private int download;
 	private String rdate;
+	
 	public int getFno() {
 		return fno;
 	}
 	public void setFno(int fno) {
 		this.fno = fno;
 	}
-	public int getParpent() {
-		return parpent;
+	public int getParent() {
+		return parent;
 	}
-	public void setParpent(int parpent) {
-		this.parpent = parpent;
+	public void setParent(int parent) {
+		this.parent = parent;
 	}
 	public String getNewName() {
 		return newName;
@@ -46,7 +45,4 @@ public class FileBean {
 	public void setRdate(String rdate) {
 		this.rdate = rdate;
 	}
-	
-	
-	
 }
