@@ -1,4 +1,4 @@
-package ke.co.jboard2.test;
+package kr.co.jboard2.test;
 
 import java.util.Properties;
 
