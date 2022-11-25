@@ -10,5 +10,5 @@
 <body>
     <div id="wrapper">
         <header>
-            <h3>Board System v2.0</h3>
+			<a href="/JBoard2/"><h3>Board System v2.0</h3></a>
         </header>

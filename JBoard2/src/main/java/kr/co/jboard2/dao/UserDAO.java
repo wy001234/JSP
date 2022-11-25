@@ -221,7 +221,7 @@ public class UserDAO extends DBHelper {
 		UserVO vo = null;
 		
 		try {
-			logger.info("selectUserBuSessId...");
+			logger.info("selectUserBySessId...");
 			conn = getConnection();
 			psmt = conn.prepareStatement(Sql.SELECT_USER_BY_SESSID);
 			psmt.setString(1, sessId);
@@ -246,7 +246,7 @@ public class UserDAO extends DBHelper {
 		}catch (Exception e) {
 			logger.error(e.getMessage());
 		}		
-		logger.debug("selectUserBuSessId : " );	
+		logger.debug("selectUserBySessId : " );	
 		return vo;
 	}
 	

@@ -28,7 +28,7 @@
 <body>
     <div id="wrapper">
         <header>
-            <h3>Board System v2.0</h3>
+            <a href="/JBoard2/"><h3>Board System v2.0</h3></a>
             <p>
                 <span>${sessUser.nick}</span>님 반갑습니다.
                 <a href="/JBoard2/user/logout.do?uid=${sessUser.uid}">[로그아웃]</a>
