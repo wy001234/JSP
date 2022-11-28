@@ -27,34 +27,6 @@
     <Manager pathname="" />
     -->
     
-    <!-- 커넥션 풀 설정 -->
-    <Resource
-        name="dbcp_java1db"
-        auth="Container"
-        type="javax.sql.DataSource"
-        driverClassName="com.mysql.cj.jdbc.Driver"
-        url="jdbc:mysql://127.0.0.1:3306/java1db"
-        username="root"
-        password="1234"
-        maxTotal="8"
-        maxIdel="8"
-        maxWaitMillis="3000"
-        />
-
-      <!-- 커넥션 풀 설정 -->
-   <Resource
-        name="dbcp_java1_shop"
-        auth="Container"
-        type="javax.sql.DataSource"
-        driverClassName="com.mysql.cj.jdbc.Driver"
-        url="jdbc:mysql://127.0.0.1:3306/java1_shop"
-        username="root"
-        password="1234"
-        maxTotal="8"
-        maxIdel="8"
-        maxWaitMillis="3000"
-        />
-
     <Resource
         name="dbcp_java1_board"
         auth="Container"
@@ -64,21 +36,9 @@
         username="java1_board"
         password="1234"
         maxTotal="8"
-        maxIdel="8"
+        maxIdle="8"
         maxWaitMillis="3000"
-        />
-
-    <Resource
-        name="dbcp_java1_bookstore"
-        auth="Container"
-        type="javax.sql.DataSource"
-        driverClassName="com.mysql.cj.jdbc.Driver"
-        url="jdbc:mysql://127.0.0.1:3306/java1_bookstore"
-        username="root"
-        password="1234"
-        maxTotal="8"
-        maxIdel="8"
-        maxWaitMillis="3000"
-        />
-        
+    />
+       
 </Context>
+

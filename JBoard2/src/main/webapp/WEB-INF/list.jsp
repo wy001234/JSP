@@ -30,7 +30,7 @@
 
         <div class="page">
         	<c:if test="${pageGroupStart > 1}">
-            <a href="/JBoard2/list.do?pg=${pageGroupStart - 1}" class="prev">이전</a>
+            <a href="/JBoard2/list.do?pg=${pageGroupStart - 1}&search=${srarch}" class="prev">이전</a>
             </c:if>
             <c:forEach var="num" begin="${pageGroupStart}" end="${pageGroupEnd}">
             <a href="/JBoard2/list.do?pg=${num}" class="num ${num == currentPage ? 'current':'off'}">${num}</a>

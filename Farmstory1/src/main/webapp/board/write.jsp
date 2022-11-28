@@ -1,6 +1,11 @@
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="/_header.jsp" %>
 <%
+	if(sessUser == null){
+		response.sendRedirect("/Farmstory1/user/login.jsp?success=101");
+		return;
+	}	
+
 	String group = request.getParameter("group");
 	String cate  = request.getParameter("cate");
 	
@@ -8,7 +13,7 @@
 %>
         <main id="board" class="write">
             
-            <form action="/Farmstory1/board/proc/writeProc.jsp" method="post">
+            <form action="/Farmstory1/board/proc/writeProc.jsp" method="post" enctype="multipart/form-data">
             	<input type="hidden" name="group" value="<%= group %>"/>
             	<input type="hidden" name="cate" value="<%= cate %>"/>
             	<input type="hidden" name="uid" value="<%= sessUser.getUid() %>"/>

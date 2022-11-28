@@ -15,17 +15,33 @@
 		 -->
 	</head>
 	<body>
-		<h3>include 액션 태그</h3>
+		<h3>include 액션태그</h3>
 		
 		<h4>include 지시자</h4>
-		<%@ include file = /inc/_header.jsp %>
-		<%@ include file = /inc/_header.jsp %>
+		<%@ include file="/inc/_header.jsp" %>
+		<%@ include file="/inc/_footer.jsp" %>
+		<%@ include file="/inc/config1.jsp" %>
+		<%
+			out.print("num1 : " + num1 + "<br/>");		
+			out.print("num2 : " + num2 + "<br/>");		
+			out.print("num3 : " + num3 + "<br/>");		
+		%>
 		
 		<h4>include 태그</h4>
+		<jsp:include page="/inc/_header.jsp"/>
+		<jsp:include page="/inc/_footer.jsp"/>
+		<jsp:include page="/inc/config2.jsp"/>
+		<%
+			// _config2가 동적타임에 include(삽입)되기 때문에 정적타임에 참조가 불가능
+			//out.print("var1 : " + var1 + "<br/>");
+			//out.print("var2 : " + var2 + "<br/>");
+			//out.print("var3 : " + var3 + "<br/>");
+		%>		
 		
 		<h4>include 메서드</h4>
 		<%
-			p
+			pageContext.include("/inc/_header.jsp");
+			pageContext.include("/inc/_footer.jsp");		
 		%>
 	</body>
 </html>

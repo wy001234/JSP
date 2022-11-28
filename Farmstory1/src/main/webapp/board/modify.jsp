@@ -1,6 +1,12 @@
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="/_header.jsp" %>
 <%
+	//로그인 체크
+	if(sessUser == null){
+		response.sendRedirect("/Farmstory1/user/login.jsp?success=101");
+		return;
+	}
+
 	String group = request.getParameter("group");
 	String cate  = request.getParameter("cate");
 
