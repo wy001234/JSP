@@ -250,6 +250,7 @@ public class UserDAO extends DBHelper {
 		return vo;
 	}
 	
+	
 	public void updateUser() {}
 	public int updateUserPassword(String uid, String pass) {
 		int result = 0;

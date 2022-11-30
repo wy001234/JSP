@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>게시판</title>
     <link rel="stylesheet" href="/JBoard2/css/style.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <style>
         #board > .list > form {
             float: right;
@@ -31,6 +32,7 @@
             <a href="/JBoard2/"><h3>Board System v2.0</h3></a>
             <p>
                 <span>${sessUser.nick}</span>님 반갑습니다.
+                 <a href="/JBoard2/user/info.do?uid=${sessUser.uid}">[회원정보]</a>
                 <a href="/JBoard2/user/logout.do?uid=${sessUser.uid}">[로그아웃]</a>
             </p>
         </header>

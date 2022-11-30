@@ -45,6 +45,30 @@
 		})
 		
 	})
+	
+	// 비밀번호 일치여부 확인
+	$('input[name=pass2]').focusout(function(){			
+		let pass1 = $('input[name=pass1]').val();
+		let pass2 = $(this).val();
+		
+		if(pass1 == pass2){
+							
+			if(pass2.match(regPass)){
+				isPassOk = true;
+				$('.resultPass').css('color', 'green').text('비밀번호가 일치합니다.');	
+			}else{
+				isPassOk = false;
+				$('.resultPass').css('color', 'red').text('영문, 숫자, 특수문자 조합 최소 5자 이상 이어야 합니다.');
+			}				
+			
+		}else{
+			isPassOk = false;
+			isPassMatch = true;
+			$('.resultPass').css('color', 'red').text('비밀번호가 일치하지 않습니다.');
+		}			
+	});
+	
+	
 </script>
         <main id="user">
             <section class="find findId">
