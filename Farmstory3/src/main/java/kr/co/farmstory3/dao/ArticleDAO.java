@@ -380,9 +380,8 @@ public class ArticleDAO extends DBHelper {
 		int total = 0;
 		try {
 			conn = getConnection();
-			stmt = conn.createStatement();
-			
-			rs = stmt.executeQuery(Sql.SELECT_COUNT_TOTAL);
+			psmt = conn.prepareStatement(Sql.SELECT_COUNT_TOTAL);
+			//psmt.setString(1, cate);
 			
 			if(rs.next()) {
 				total = rs.getInt(1);

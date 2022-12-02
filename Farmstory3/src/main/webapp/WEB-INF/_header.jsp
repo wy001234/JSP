@@ -33,6 +33,7 @@
             <p>
                 <a href="/Farmstory3/">HOME |</a>
                 <a href="/Farmstory3/user/login.do">로그인 |</a>
+                <span>${sessUser.nick}</span>님 반갑습니다.
                 <a href="/Farmstory3/user/terms.do">회원가입 |</a>
                 <a href="/Farmstory3/board/list.do">고객센터</a>
             </p>

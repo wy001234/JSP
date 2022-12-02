@@ -51,7 +51,7 @@ public class LoginController extends HttpServlet {
 					HttpSession session = req.getSession(); // 현재 클라이언트 세션 구함
 					session.setAttribute("sessUser", vo);
 					
-					resp.sendRedirect("/Farmstory3/board/list.do");
+					resp.sendRedirect("/Farmstory3/index.do");
 					
 				}else {
 					// 회원 아님

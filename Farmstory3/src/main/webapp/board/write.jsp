@@ -1,12 +1,15 @@
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
 <jsp:include page="/WEB-INF/_header.jsp"/>
-<jsp:include page="./_${group}.jsp"/>
 <main id="board">
     <section class="write">
 
-        <form action="#">
+        <form action="/Farmstory3/board/write.do?group=${group}&cate=${cate}" method="post" enctype="multipart/form-data">
+           	<input type="hidden" name="uid" value="${sessUser.uid}"/>
+<%--             <input type="hidden" name="group" value="${vo.group}"/> --%>
+<%--             <input type="hidden" name="cate" value="${vo.cate}"/> --%>
+            
             <table border="0">
-                <caption>글쓰기</caption>
+                <caption>글쓰기</caption>                
                 <tr>
                     <th>제목</th>
                     <td><input type="text" name="title" placeholder="제목을 입력하세요."/></td>

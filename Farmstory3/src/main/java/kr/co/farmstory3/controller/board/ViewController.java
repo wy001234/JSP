@@ -1,6 +1,7 @@
 package kr.co.farmstory3.controller.board;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -8,6 +9,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import kr.co.farmstory3.dao.ArticleDAO;
+import kr.co.farmstory3.vo.ArticleVO;
 
 @WebServlet("/board/view.do")
 public class ViewController extends HttpServlet {
@@ -24,6 +28,20 @@ public class ViewController extends HttpServlet {
 		String group = req.getParameter("group");
 		String cate = req.getParameter("cate");
 		
+		String no = req.getParameter("no");
+		String pg = req.getParameter("pg");
+		
+		// DAO 객체 가져오기
+		ArticleDAO dao = ArticleDAO.getInstance();
+		
+		// 글 조회수 카운트 +1
+		dao.updateArticleHit(no);
+		
+		// 글 가져오기
+		ArticleVO article = dao.selectArticle(no);
+
+		
+		req.setAttribute("article", article);
 		req.setAttribute("group", group);
 		req.setAttribute("cate", cate);
 		
